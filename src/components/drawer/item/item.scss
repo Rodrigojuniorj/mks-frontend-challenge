@@ -1,0 +1,95 @@
+.item_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5.938rem;
+
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding-left: 1.313rem;
+    padding-right: 1.25rem;
+
+    .item_left {
+        display: flex;
+        align-items: center;
+        gap: 1.313rem;
+
+        img {
+            height: 3.813rem;
+            width: 3.125rem;
+            object-fit: contain;
+        }
+
+        p {
+            width: 7.063rem;
+            font-weight: 400;
+            font-size: 0.813rem;
+        }
+    }
+
+    .item_button_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        gap: 0.25rem;
+        justify-content: center;
+        
+        .item_qtd {
+            color: #000000;
+            font-size: 0.313rem;
+        }
+        
+        .item_button_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+    
+            border-radius: 0.25rem;
+            border: 1px solid #BFBFBF;
+            width: 3.125rem;
+            height: 1.188rem;
+            font-size: 0.5rem;
+    
+            button {
+                border: none;
+                background-color: transparent;
+            }
+    
+            .item_center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000000;
+                font-weight: bold;
+            }
+    
+            .button_left {
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 10px;
+                    border-right: 1px solid #BFBFBF;
+                }
+            }
+    
+            .button_right {
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 10px;
+                    border-left: 1px solid #BFBFBF;
+                }
+            }
+            
+        }
+    }
+
+    .item_right {
+        font-size: $size-sm;
+        font-weight: bold;
+    }
+
+}

@@ -52,4 +52,14 @@
             filter: opacity(0.9);
         }
     }
+
+    .EZDrawer {
+        position: absolute;
+        
+        nav {
+            background-color: $primary;
+            padding: 2.25rem 1.375rem 2.25rem 2.938rem;
+        }
+        
+    }   
 }

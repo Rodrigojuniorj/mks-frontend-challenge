@@ -1,5 +1,5 @@
 import { api } from "@/data/api"
-import { TProducts } from "@/data/types/product"
+import { TProducts } from "@/data/types/products"
 
 export async function getProducts(): Promise<TProducts> {
     const params = {

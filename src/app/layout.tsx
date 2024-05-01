@@ -2,7 +2,7 @@ import '@/styles/globals.scss';
 
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { Navbar } from '@/components/navbar/navbar';
+import { Navbar } from '@/components/navbar/navbar.component';
 import Providers from '@/providers/Providers';
 
 const montSerrat = Montserrat({ 

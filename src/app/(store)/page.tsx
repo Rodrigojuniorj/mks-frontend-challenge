@@ -1,7 +1,7 @@
 import './store.scss';
 
 import { getProducts } from "@/apis/getProducts.api";
-import { Cards } from "@/components/cards/cards";
+import { Cards } from "@/components/cards/cards.component";
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 
 export default async function Strore() {

@@ -1,0 +1,39 @@
+.drawer_container{
+    height: 100%;
+
+
+    .drawer_header {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.688rem;
+            color: #ffffff;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            border-radius: 100%;
+            border: none;
+            width: 2.375rem;
+            height: 2.375rem;
+
+            span {
+                font-weight: 400;
+                font-size: $size-2xl;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .drawer_body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.375rem;
+        margin-top: 4rem;
+    }
+}

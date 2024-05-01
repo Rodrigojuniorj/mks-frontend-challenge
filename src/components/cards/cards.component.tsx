@@ -1,12 +1,16 @@
 "use client"
 
 import './cards.scss'
+import { useCart } from '@/context/cart-context'
 import { getProducts } from "@/apis/getProducts.api"
 import { formattedPrice } from "@/utils/formattedPrice"
 import { useQuery } from "@tanstack/react-query"
 import Image from "next/image"
+import { TProduct } from '@/data/types/cart'
 
 export function Cards() {
+    const { addToCart } = useCart()
+
     const { data: products } = useQuery({ 
         queryKey: ['getProducts'], 
         queryFn: getProducts
@@ -14,6 +18,10 @@ export function Cards() {
 
     if(!products){
         return <div>Carregando...</div>
+    }
+
+    function handleAddToCart(product: TProduct){
+        addToCart(product)
     }
     
     return (
@@ -29,7 +37,7 @@ export function Cards() {
                     <p className='body_card'>{product.description}</p>
                 </div>
 
-                <button className='footer_card'>
+                <button className='footer_card' onClick={() => handleAddToCart(product)}>
                     <Image src="/store/shopping-bag.svg" width={20} height={20} alt="Shopping bag" />
                     <span>COMPRAR</span>
                 </button>
