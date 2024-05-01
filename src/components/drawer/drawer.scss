@@ -1,6 +1,12 @@
 .drawer_container{
+    display: flex;
     height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 
+    .drawer_wrapper {
+        padding: 2.25rem 1.375rem 2.25rem 2.938rem;
+    }
 
     .drawer_header {
         display: flex;
@@ -31,9 +37,50 @@
     }
 
     .drawer_body {
+        overflow-y: auto;
+        max-height: 33.75rem;
+        margin-top: 4rem;
+
+        .item_content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.375rem;
+            padding-right: 2.3rem;
+            padding-top: 20px;
+        }
+
+    }
+
+    .drawer_footer {
         display: flex;
         flex-direction: column;
-        gap: 1.375rem;
-        margin-top: 4rem;
+        
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 2.8rem 2.625rem 2.938rem;
+            
+            p {
+                font-size: $size-2xl;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+
+        button {
+            height: 6.063rem;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            font-weight: bold;
+            font-size: $size-2xl;
+            
+            transition: all 0.3s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
     }
 }
