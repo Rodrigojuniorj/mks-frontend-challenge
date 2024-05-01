@@ -25,7 +25,7 @@ export function Drawer({ toggleDrawer }: TDrawer){
 
             <div className='drawer_body'>
                 {items.map(item => (
-                    <Item key={item.id} id={item.id} amount={item.amount} name={item.name} photo={item.photo} total={item.total} />
+                    <Item price={item.price} key={item.id} id={item.id} amount={item.amount} name={item.name} photo={item.photo} total={item.total} />
                 ))}
             </div>
         </div>

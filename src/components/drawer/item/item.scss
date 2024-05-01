@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     height: 5.938rem;
 
@@ -30,13 +31,15 @@
 
     .item_button_wrapper{
         display: flex;
+        position: relative;
         flex-direction: column;
         align-items: flex-start;
-        height: 100%;
         gap: 0.25rem;
         justify-content: center;
-        
+
         .item_qtd {
+            position: absolute;
+            top: -0.6rem;
             color: #000000;
             font-size: 0.313rem;
         }
@@ -88,8 +91,34 @@
     }
 
     .item_right {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: end;
+
         font-size: $size-sm;
         font-weight: bold;
+        width: 6.25rem;
     }
 
+    .delete_button {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        border-radius: 100%;
+        border: none;
+
+        width: 1.125rem;
+        height: 1.125rem;
+
+        span {
+            font-weight: 400;
+            font-size: $size-sm;
+            color: #ffffff;
+        }
+    }
 }

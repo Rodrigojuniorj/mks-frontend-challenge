@@ -2,8 +2,11 @@ import './item.scss'
 import { TCart } from '@/data/types/cart'
 import Image from 'next/image'
 import { formattedPrice } from '@/utils/formattedPrice'
+import { useCart } from '@/context/cart-context'
 
-export function Item({ id, name, amount, photo, total }: TCart){
+export function Item({ id, name, amount, photo, total, price }: TCart){
+    const { sumCart, subtractFromCart, deleteFromCart } = useCart()
+    
     return (
         <div className='item_container'>
             <div className='item_left'>
@@ -13,7 +16,7 @@ export function Item({ id, name, amount, photo, total }: TCart){
             <div className='item_button_wrapper'>
                 <span className='item_qtd'>Qtd:</span>
                 <div className='item_button_container'>
-                    <button className='button_left'>
+                    <button className='button_left' onClick={() => subtractFromCart(id, price)}>
                         <div>
                             <span>-</span>
                         </div>
@@ -21,7 +24,7 @@ export function Item({ id, name, amount, photo, total }: TCart){
                     <div className='item_center'>
                         <span>{total}</span>
                     </div>
-                    <button className='button_right'>
+                    <button className='button_right' onClick={() => sumCart(id, price)}>
                         <div>
                             <span>+</span>
                         </div>
@@ -29,6 +32,11 @@ export function Item({ id, name, amount, photo, total }: TCart){
                 </div>
             </div>
             <div className='item_right'>{formattedPrice(amount.toString())}</div>
+            <button className='delete_button' onClick={() => deleteFromCart(id)}>
+                <span>
+                x
+                </span>
+            </button>
         </div>
     )
 }

@@ -4,6 +4,7 @@ export type TCart = {
   photo: string
   total: number
   amount: number
+  price: string
 }
 
 export type TProduct = {
