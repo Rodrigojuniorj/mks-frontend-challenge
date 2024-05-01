@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.313rem;
+
+    background-color: $primary;
+
+    padding: 0 $size-6xl;
+
+    .title {
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+        color: white;
+        
+        h1 {
+            font-size: $size-4xl;
+            font-weight: 600;
+            line-height: 1.9rem;
+
+        }
+
+        span {
+            font-size: $size-xl;
+            font-weight: 300;
+        }
+    }
+
+    .card_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        
+        width: 5.625rem;
+        height: 2.813rem;
+        border-radius: 0.5rem;
+
+        background-color: white;
+        border: none;
+        
+        transition: all 0.3s;
+
+        span {
+            font-weight: 700;
+            font-size: $size-lg;
+            height: $size-lg;
+        }
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
