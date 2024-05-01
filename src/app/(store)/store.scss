@@ -1,0 +1,13 @@
+.container_main{
+    padding-top: 7.25rem;
+    height: 100%;
+
+    .container_cards {
+        margin: 0 auto;
+        height: 100%;
+        max-width: 58.625rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
+}

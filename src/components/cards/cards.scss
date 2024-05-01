@@ -1,0 +1,92 @@
+.item_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 0.5rem;
+    
+    max-width: 13.625rem;
+    max-height: 17.813rem;
+
+    .content_card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0 0.625rem;
+
+        .img_item {
+            padding-top: $size-lg;
+            width: 6.938rem;
+            height: 8.625rem;
+            object-fit: contain;
+        }
+    
+        .header_card {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: $size-sm;
+    
+            p {
+                text-align: left;
+                font-weight: 400;
+                color: $gray-300;
+                font-size: $size-base;
+                height: 2.375rem;
+            }
+    
+            span {
+                padding: 0.5rem;
+                background-color: $gray-500;
+                color: white;
+                font-weight: 700;
+                line-height: 15px;
+                border-radius: 0.313rem;
+            }
+        }
+
+        .body_card{
+            font-size: 0.625rem;
+            line-height: $size-xs;
+            font-weight: 300;
+            padding-top: 0.5rem;
+            padding-bottom: $size-xs;
+            height: 3.063rem;
+        }
+
+    }
+
+    .footer_card{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $size-sm;
+
+        background-color: $primary;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding: 0.5rem 0;
+        border: none;
+
+        transition: all 0.3s;
+
+        img {
+            width: $size-xs;
+            height: 0.844rem;
+            object-fit: cover;
+        }
+
+        span {
+            font-weight: 600;
+            color: white;
+        }
+
+        &:hover {
+            filter: opacity(0.9);
+        }
+    }
+}

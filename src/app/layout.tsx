@@ -3,6 +3,7 @@ import '@/styles/globals.scss';
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Navbar } from '@/components/navbar/navbar';
+import Providers from '@/providers/Providers';
 
 const montSerrat = Montserrat({ 
   subsets: ["latin"],
@@ -21,10 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body className={`${montSerrat.className}`}>
-        <Navbar />
-        {children}
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
