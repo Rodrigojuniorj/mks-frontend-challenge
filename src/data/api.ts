@@ -1,5 +1,6 @@
 export function api(
   path: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   params?: Record<string, any>,
   init?: RequestInit,
 ) {
