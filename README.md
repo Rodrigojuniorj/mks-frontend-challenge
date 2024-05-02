@@ -1,3 +1,6 @@
+## Links Uteis
+- [Vercel](https://mks-frontend-challenge-rodrigo.vercel.app)
+
 # Instruções de instalação
 
 ```bash
@@ -15,10 +18,6 @@
     $ yarn start
 
 ```
-
-## Links Uteis
-
-- [Vercel](https://mks-frontend-challenge-react-pjota94.vercel.app/)
 
 | 🛠 Tecnologias Utilizadas |
 | ------------------------ |
