@@ -1,11 +1,10 @@
-import { env } from '@/env'
-
 export function api(
   path: string,
   params?: Record<string, any>,
   init?: RequestInit,
 ) {
-  const baseUrl = env.NEXT_PUBLIC_API_BASE_URL
+  const baseUrl =
+    'https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1'
   const url = new URL(`${baseUrl}${path}`)
 
   if (params) {
