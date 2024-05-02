@@ -6,6 +6,7 @@ import { Montserrat } from 'next/font/google'
 import { Navbar } from '@/components/navbar/navbar.component'
 import Providers from '@/providers/Providers'
 import { ToastContainer } from 'react-toastify'
+import { Footter } from '@/components/footer/footer.component'
 
 const montSerrat = Montserrat({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          <Footter />
         </Providers>
         <ToastContainer
           position="top-right"

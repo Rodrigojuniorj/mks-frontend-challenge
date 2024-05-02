@@ -1,6 +1,8 @@
-.container_main{
-    padding-top: 7.25rem;
-    height: 100%;
+.container_main {
+    margin: 7.25rem auto 0;
+    padding: 0 $size-6xl;
+    overflow-y: auto;
+    max-height: 38.75rem;
 
     .container_cards {
         margin: 0 auto;
@@ -9,5 +11,31 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 1.375rem;
         row-gap: 1.938rem;
+        place-items: center;
+    }
+    
+    @media (max-width: 1060px) {
+        
+        .container_cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 832px) {
+        .container_cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    @media (max-width: 590px) {
+        .container_cards {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .container_main {
+        padding: 0 $size-2xl;
     }
 }

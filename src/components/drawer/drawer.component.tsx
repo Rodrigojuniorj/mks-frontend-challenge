@@ -1,8 +1,9 @@
-import { useCart } from '@/context/cart-context'
 import './drawer.scss'
 import { Item } from './item/item.component'
 import { formattedPrice } from '@/utils/formattedPrice'
 import { toast } from 'react-toastify'
+import { motion } from 'framer-motion'
+import { useCart } from '@/context/cart-context'
 
 type TDrawer = {
   toggleDrawer: () => void
@@ -54,10 +55,18 @@ export function Drawer({ toggleDrawer }: TDrawer) {
       </div>
 
       <div className="drawer_footer">
-        <div>
+        <motion.div layout>
           <p>Total:</p>
-          <p>{formattedPrice(countTotalAmountInCart().toString())}</p>
-        </div>
+          <motion.p
+            layout
+            key={countTotalAmountInCart()}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            {formattedPrice(countTotalAmountInCart().toString())}
+          </motion.p>
+        </motion.div>
 
         <button onClick={handleSubmitCart}>Finalizar Compra</button>
       </div>

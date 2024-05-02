@@ -61,4 +61,12 @@
         }
         
     }   
+
+}
+@media (max-width: 425px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
 }
